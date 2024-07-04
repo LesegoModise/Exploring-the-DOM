@@ -46,7 +46,7 @@ theMessageButton.addEventListener('click', function () {
         myMessage.innerText = 'Type Something Darling';
         setTimeout(function () {
             myMessage.innerText = '';
-        }, 3000);
+        }, 5000);
     }
 });
 
