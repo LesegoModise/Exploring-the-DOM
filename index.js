@@ -32,13 +32,16 @@ const inputBox = document.querySelector('.theInputValue');
 //         }, 3000)
 // });
 
-theMessageButton.addEventListener('click', function() {
-    myMessage.innerText = inputBox.value
+theMessageButton.addEventListener('click', function () {
+    myMessage.innerText = inputBox.value;
+    setTimeout(function () {
+        myMessage.innerText = '';
+    }, 5000);
 });
 
-theMessageButton.addEventListener('click', function() {
+theMessageButton.addEventListener('click', function () {
     if (inputBox.value.trim().length > 0) {
-       myMessage.innerText = inputBox.value;
+        myMessage.innerText = inputBox.value;
     } else {
         myMessage.innerText = 'Type Something Darling';
         setTimeout(function () {
@@ -47,7 +50,7 @@ theMessageButton.addEventListener('click', function() {
     }
 });
 
-myMessage.addEventListener('click', function() {
+myMessage.addEventListener('click', function () {
     myMessage.classList.toggle('darkmode')
 })
 
@@ -57,19 +60,19 @@ const fruitList = document.querySelector('.fruits');
 const fruitInput = document.querySelector('.inputFruit');
 const addFruitButton = document.querySelector('.addFruitButton');
 
-for(let i=0;i<fruits.length;i++){
+for (let i = 0; i < fruits.length; i++) {
     // get fruits from the list
     const fruit = fruits[i];
-    
+
     // create a new li element
     const li = document.createElement('li');
     li.innerText = fruit;
     fruitList.appendChild(li);
- }
+}
 
- addFruitButton.addEventListener('click', function(){
+addFruitButton.addEventListener('click', function () {
     const li = document.createElement('li');
     li.innerText = fruitInput.value;
     fruitList.appendChild(li);
- })
- 
+
+})
