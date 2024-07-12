@@ -1,0 +1,21 @@
+.lightmode {
+    background-color: white;
+    color: black;
+}
+
+body {
+    background-image: url(background.jpg);
+    height: 100px;
+    color: beige;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+.theMessageButton, .clearMessageButton, .addFruitButton, .theInputValue, .inputFruit {
+    background-color: grey;
+    color: black;
+    font-weight: bold;
+    border: solid white;
+    border-radius: 1em;
+}

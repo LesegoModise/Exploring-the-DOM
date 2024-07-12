@@ -19,18 +19,18 @@ const inputBox = document.querySelector('.theInputValue');
 //     myMessage.innerText = 'This is a message in the DOM!' // This shows the "message" after the "show message" button has been "fired up"
 // });
 
-// clearMessageButton.addEventListener('click', function() {
-//     myMessage.innerText = ''; // This will clear our "This is a message..." message 
-// });
+clearMessageButton.addEventListener('click', function() {
+    myMessage.innerText = ''; // This will clear our "This is a message..." message 
+});
 
-// theMessageButton.addEventListener('click', function() {
-//     setTimeout(function () {
-//             myMessage.innerText = 'This is a message in the DOM!' // This bring the "message" after 3 seconds
-//             setTimeout(function () {
-//                 myMessage.innerText = ''; // This will clear our "This is a message..." message after 3 seconds
-//             }, 3000)
-//         }, 3000)
-// });
+theMessageButton.addEventListener('click', function() {
+    setTimeout(function () {
+            myMessage.innerText = 'This is a message in the DOM!' // This bring the "message" after 3 seconds
+            setTimeout(function () {
+                myMessage.innerText = ''; // This will clear our "This is a message..." message after 3 seconds
+            }, 5000)
+        }, 5000)
+});
 
 theMessageButton.addEventListener('click', function () {
     myMessage.innerText = inputBox.value;
@@ -43,7 +43,7 @@ theMessageButton.addEventListener('click', function () {
     if (inputBox.value.trim().length > 0) {
         myMessage.innerText = inputBox.value;
     } else {
-        myMessage.innerText = 'Type Something Darling';
+        myMessage.innerText = 'Type Something, Darling';
         setTimeout(function () {
             myMessage.innerText = '';
         }, 5000);
@@ -51,7 +51,7 @@ theMessageButton.addEventListener('click', function () {
 });
 
 myMessage.addEventListener('click', function () {
-    myMessage.classList.toggle('darkmode')
+    myMessage.classList.toggle('lightmode')
 })
 
 
